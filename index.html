@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title> Portfolio | Heshan Liyanage</title>
+<link rel="icon" href="1.jpg" type="image/png">
+<meta property="og:title" content="Heshan Liyanage | Data Science Enthusiast" />
+<meta name="description" content="Data Science Enthusiast who crunch numbers - I adapt, lead and deliver to perfection." />
+<meta name="keywords" content="Data Analyst Top Candidate Portfolio, Sri Lanka"/>
+<meta name="author" content="Heshan Liyanage" />
+<meta name="theme-color" content="#0f172a" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            slate: { 950: '#020617' }, // Deep dark background
+            accent: { 500: '#38bdf8', 600: '#0284c7' } // Electric Blue
+          }
+        }
+      }
+    }
+</script>
+<style>
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0f172a; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+body { font-family: 'Inter', sans-serif; }
+section { scroll-margin-top: 110px; }
+.glass { 
+    backdrop-filter: blur(12px); 
+    background: rgba(30, 41, 59, 0.7); 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.glass-hover:hover {
+    background: rgba(51, 65, 85, 0.8);
+    border-color: rgba(56, 189, 248, 0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+@keyframes fadeUp { from { opacity:0; transform: translateY(20px);} to {opacity:1; transform: translateY(0);} }
+[data-animate] { opacity:0; animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+
+/* Social: 2.5D/3D hover */
+.social-3d-btn { perspective: 900px; }
+.social-3d-card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 280ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 280ms cubic-bezier(0.16, 1, 0.3, 1), border-color 280ms;
+}
+.social-3d-card::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: -14px;
+    height: 22px;
+    background: radial-gradient(closest-side, rgba(0,0,0,0.55), rgba(0,0,0,0));
+    transform: translateZ(-1px);
+    filter: blur(2px);
+    opacity: 0;
+    transition: opacity 280ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.social-3d-btn:hover .social-3d-card {
+    transform: translateY(-10px) rotateX(10deg) rotateY(-10deg);
+    box-shadow: 0 18px 45px -18px rgba(0, 0, 0, 0.75);
+}
+.social-3d-btn:hover .social-3d-card::after { opacity: 1; }
+.social-3d-btn:active .social-3d-card { transform: translateY(-4px) rotateX(6deg) rotateY(-6deg) scale(0.98); }
+
+/* Education tree timeline */
+.edu-trunk { background: rgba(148, 163, 184, 0.25); }
+.edu-node { box-shadow: 0 0 0 6px rgba(2, 6, 23, 0.9); }
+</style>
+</head>
+
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-cyan-500 selection:text-white">
+
+<header class="fixed top-0 w-full z-50 transition-all duration-300 p-4">
+<div class="mx-auto max-w-7xl glass rounded-2xl px-6 py-3 flex items-center justify-between shadow-lg shadow-black/20">
+    <a href="#home" class="flex items-center gap-3 group">
+        <div class="h-10 w-10 overflow-hidden rounded-full border-2 border-slate-700 group-hover:border-cyan-400 transition-colors">
+            <img src="1.jpg" alt="Profile" class="h-full w-full object-cover" />
+        </div>
+        <div>
+            <span class="block font-bold text-sm tracking-wide">HESHAN'S PORTFOLIO</span>
+            <span class="block text-[10px] text-cyan-400 font-mono">SINCE 2013</span>
+        </div>
+    </a>
+    <nav class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
+        <a class="hover:text-cyan-400 transition-colors" href="#projects">Projects</a>
+        <a class="hover:text-cyan-400 transition-colors" href="#education">Education</a>
+        <a class="hover:text-cyan-400 transition-colors" href="#skills">Skills</a>
+        <a class="hover:text-cyan-400 transition-colors" href="#certifications">Certifications</a>
+        <a class="hover:text-cyan-400 transition-colors" href="#contact">Contact</a>
+    </nav>
+    <a href="https://mail.google.com/mail/?view=cm&to=liyaheam@gmail.com" target="_blank" class="bg-cyan-600 hover:bg-cyan-500 text-white px-4 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-cyan-500/20">
+        Hire Me
+    </a>
+</div>
+</header>
+
+<section id="home" class="relative pt-32 pb-20 overflow-hidden min-h-screen flex items-center">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-cyan-500/20 rounded-full blur-[120px] -z-10"></div>
+
+    <div class="mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div data-animate class="order-2 md:order-1">
+            <div class="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-1.5 text-xs font-bold text-cyan-400 mb-6">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                </span>
+                Open to Opportunities
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-6 leading-tight">
+                Heshan Liyanage <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">Data Science <br> Enthusiast</span>
+            </h1>
+            
+            <p class="text-lg text-slate-400 mb-8 max-w-xl leading-relaxed">
+
+                 I am a driven data science enthusiast looking for practical, hands on technical experience. I offer exceptional adaptability, allowing me to master new workflows in a rapid learning curve. complemented by strong management soft skills including natural leadership, teamwork and client handling. I am a goal oriented professional, dedicated to delivering near perfect results
+    
+            </p>
+
+            
+        </div>
+
+        <div data-animate class="order-1 md:order-2 relative delay-200">
+            <div class="earth-container mx-auto w-72 h-72 md:w-96 md:h-96">
+                <div class="earth"></div>
+                <div class="profile-overlay glass">
+                    <img src="1.jpg" alt="Heshan" class="h-full w-full object-cover">
+                </div>
+            </div>
+            <br>
+            <div class="flex flex-wrap gap-4">
+                <a href="#projects" class="bg-white text-slate-900 px-8 py-3.5 rounded-xl font-bold hover:bg-slate-200 transition-colors">
+                    View Technical Projects
+                </a>
+                <a href="#education" class="glass px-8 py-3.5 rounded-xl font-bold hover:bg-slate-800 transition-colors text-white border border-slate-700">
+                    Explore My Journey
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="py-16 relative overflow-hidden">
+    <div class="mx-auto max-w-6xl px-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <a href="https://www.linkedin.com/in/heam/" target="_blank" class="social-3d-btn group" data-animate>
+                <div class="social-3d-card glass p-6 rounded-2xl border-b-4 border-b-[#0A66C2] group-hover:bg-[#0A66C2]/10 transition-all">
+                    <i class="fab fa-linkedin text-5xl text-[#0A66C2] group-hover:scale-110 transition-transform"></i>
+                    <h3 class="mt-4 font-bold text-slate-200">LinkedIn</h3>
+                </div>
+            </a>
+            <a href="https://www.kaggle.com/heshanliyanage" target="_blank" class="social-3d-btn group delay-100" data-animate>
+                <div class="social-3d-card glass p-6 rounded-2xl border-b-4 border-b-[#20BEFF] group-hover:bg-[#20BEFF]/10 transition-all">
+                    <i class="fab fa-kaggle text-5xl text-[#20BEFF] group-hover:scale-110 transition-transform"></i>
+                    <h3 class="mt-4 font-bold text-slate-200">Kaggle</h3>
+                </div>
+            </a>
+            <a href="https://github.com/HeamGeek" target="_blank" class="social-3d-btn group delay-200" data-animate>
+                <div class="social-3d-card glass p-6 rounded-2xl border-b-4 border-b-[#ffffff] group-hover:bg-[#ffffff]/10 transition-all">
+                    <i class="fab fa-github text-5xl text-white group-hover:scale-110 transition-transform"></i>
+                    <h3 class="mt-4 font-bold text-slate-200">GitHub</h3>
+                </div>
+            </a>
+            <a href="https://www.credly.com/users/heshan-liyanage.3ede976a/badges#credly" target="_blank" class="social-3d-btn group delay-300" data-animate>
+                <div class="social-3d-card glass p-6 rounded-2xl border-b-4 border-b-[#FF6B35] group-hover:bg-[#FF6B35]/10 transition-all">
+                    <i class="fas fa-certificate text-5xl text-[#FF6B35] group-hover:scale-110 transition-transform"></i>
+                    <h3 class="mt-4 font-bold text-slate-200">Credly</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="projects" class="py-20 bg-slate-950">
+    <div class="mx-auto max-w-7xl px-6">
+        <h2 class="text-3xl md:text-4xl font-black mb-12 flex items-center gap-4">
+            <span class="w-12 h-1 bg-cyan-500 rounded-full"></span>
+            Featured Projects
+        </h2>
+
+        <div class="grid grid-cols-1 gap-8">
+            
+            <article class="glass glass-hover p-8 rounded-3xl transition-all duration-300 border-l-4 border-l-cyan-500">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-cyan-900/40 text-cyan-300 px-3 py-1 rounded-full text-xs font-bold border border-cyan-500">AI / Deep Learning</span>
+                            <span class="bg-slate-800 text-slate-300 px-3 py-1 rounded-full text-xs font-bold border border-cyan">Research & Experimental</span>
+
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">MediClear - Multi Model Prescription Prediction System</h3>
+                        <p class="text-cyan-400 text-sm font-mono mb-4">Jun 2025 - Oct 2025</p>
+                        
+                        <div class="space-y-4 text-slate-300 text-sm leading-relaxed">
+                            
+                            <p><strong>Architectural Strategy & Training:</strong> Designed three-tier architecture of Convolutional Recurrent Neural Network, EfficientNet B3 backbone & Transformer-based (TrOCR) models. Agile component-based experimental test-driven development approach used for MediClear. Pytorch infrastructure used over TensorFlow to smooth adaptations over neural networks and transformer architectures.Employed Bidirectional-LSTM, GRU, Data Augmentation Pipeline(albumentations), Multi-head Attention layers to model complex character dependencies.Mixed Precision (AMP) with Nvidia CUDA GPU acceleration, Checkpointing & Memory mgt needed for chosen technical stack & extensive parameters to achieve this success (CRNN reach 0.942 CA,0.891 EA, CER 0.042 while B3 reach 0.8899 CA, 0.8665 EA)using consumer-grade laptop targeting to achieve the highest possible accuracy & performence (Infernece PT 0.84-12 sec even on heavy loads) at minimal cost</p>
+                            <p><strong>Data Engineering:</strong> Created a dataset of 29,000+ labeled samples, implementing MD5 perceptual hashing for deduplication,Gradual unfreezing mechanism used to retain pre-trained weights & WeightedRandomSampler with Focal CTC Loss to overcome a critical 157:1 class imbalance</p>
+                            <p><strong>Robust Preprocessing:</strong> Non-repeating region extraction using OpenCV & EasyOCR featuring CLAHE, pre-processing filters,MSER detection,aspect-ratio preserved padding</p>
+                            <p><strong>Post-Processing & Safety:</strong> Developed a pharmaceutical logic layer using RapidFuzz for medical lexicon-constrained decoding and generic drug mapping to ensure pharmaceutical clarity. Confidence Calibrator & Unified Model Manager used to avoid bias</p>
+                            <p><strong>Assemble and Testing:</strong> Assembled responsive Flask-based web application validated by over 30 automated Python testing scripts while covering unit, integration,UAT scenarios through Detailed CLI logging prints & API endpoints for monitoring and maintenance. MediClear solves the issue using strategic resource management, rigorous test-driven development & advanced deep-learning implementations</p>
+                        </div>
+
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="text-xs font-bold text-cyan-400 border border-cyan-400 px-2 py-2 rounded">PyTorch</span>
+                            <span class="text-xs font-bold text-cyan-400 border border-cyan-400 px-2 py-2 rounded">Convolutional Recurrent Neural Network</span>
+                            <span class="text-xs font-bold text-cyan-400 border border-cyan-400 px-2 py-2 rounded">EfficientNet B3 backbone</span>
+                            <span class="text-xs font-bold text-cyan-400 border border-cyan-400 px-2 py-2 rounded"> Microsoft Huggleface TrOCR</span>
+                            <span class="text-xs font-bold text-cyan-400 border border-cyan-400 px-2 py-2 rounded"">Flask</span>
+                            <span class="text-xs font-bold text-cyan-400 border border-cyan-400 px-2 py-2 rounded">Albumentations</span>
+                            <span class="text-xs font-bold text-cyan-400 border border-cyan-400 px-2 py-2 rounded">GRU & Bi-LSTM</span>
+                            <span class="text-xs font-bold text-cyan-400 border border-cyan-400 px-2 py-2 rounded">MD5 Hashing</span>
+                            <span class="text-xs font-bold text-cyan-400 border border-cyan-400 px-2 py-2 rounded">EasyOCR & OpenCV</span>
+                            <span class="text-xs font-bold text-cyan-400 border border-cyan-400 px-2 py-2 rounded"">RapidFuzz</span>
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </article>
+
+            <article class="glass glass-hover p-8 rounded-3xl transition-all duration-300">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="bg-indigo-900 text-indigo px-3 py-1 rounded-full text-xs font-bold border border-indigo-500">Enterprise Software</span>
+                    <span class="text-sm text-slate-500 font-mono">Aug 2025 - Sep 2025</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">MediCare - Hospital Appointment System</h3>
+
+                <div class="space-y-4 text-slate-300 text-sm leading-relaxed">
+                    <p>Designed & developed full-stack, enterprise-oriented healthcare appointment system to digitize & optimize the full detailed sequence of channeling process. This was carefully engineered, considering the authorizing levels for strategic application, emphasis on architecture, data integrity, security & workflow governance.</p>
+
+                    <p><strong>System Architecture</strong> - Engineered a modular ASP.NET Core MVC (.NET 8) solution with strict separation of concerns and maintainable business logic.</p>
+                    <p><strong>Security & Access Control</strong> - Implemented a centralized Master Login with Role-Based Access Control (RBAC) using ASP.NET Identity, enforcing healthcare-grade data isolation across Admin, Doctor, Patient & Guest roles.</p>
+                    <p><strong>Database Engineering</strong> - Designed and implemented a normalized MSSQL relational database (3NF), transitioning ERDs from Oracle SQL Developer & managing schema evolution via Entity Framework Core migrations.</p>
+                    <p><strong>Advanced Business Logic</strong> - Built a state-driven appointment & payment lifecycle (Unpaid → Pending → Approved / Rejected → Confirmed → Completed), ensuring financial validation before & after clinical confirmation.</p>
+                    <p><strong>Clinical Workflow Design</strong> - Developed doctor-centric modules for schedule management, Appointment Confirmation, controlled patient medical history access based on the patient-doctor relation, consultation notes & prescriptions, maintaining longitudinal medical records.</p>
+                    <p><strong>Administrative Intelligence</strong> - Implemented admin dashboards for doctor & specialty management, payment approvals, feedback governance & real-time Report generation.</p>
+                    <p><strong>Responsive UI/UX</strong> - Delivered a mobile-responsive interface using Razor Views, enabling real-time system monitoring across devices.</p>
+                     <p><strong>Quality Assurance</strong> - Conducted comprehensive unit, integration & system testing, validating end-to-end workflows for ensuring production readiness.</p>
+
+                </div>
+                <br>
+                <div class="flex flex-wrap gap-2 mt-auto">
+                    <span class="text-xs font-bold text-indigo-400 border border-indigo-400 px-2 py-1 rounded"">ASP.NET Core MVC</span>   
+                    <span class="text-xs font-bold text-indigo-400 border border-indigo-400 px-2 py-1 rounded"">MSSQL</span>
+                    <span class="text-xs font-bold text-indigo-400 border border-indigo-400 px-2 py-1 rounded"">Entity Framework Core</span>
+                    <span class="text-xs font-bold text-indigo-400 border border-indigo-400 px-2 py-1 rounded"">Oracle SQL Developer</span>
+                    <span class="text-xs font-bold text-indigo-400 border border-indigo-400 px-2 py-1 rounded"">ASP.NET Identity</span>
+                    <span class="text-xs font-bold text-indigo-400 border border-indigo-400 px-2 py-1 rounded"">Razor Pages</span>
+                    <span class="text-xs font-bold text-indigo-400 border border-indigo-400 px-2 py-1 rounded"">HTML5</span>
+                    <span class="text-xs font-bold text-indigo-400 border border-indigo-400 px-2 py-1 rounded"">CSS3</span>
+                    <span class="text-xs font-bold text-indigo-400 border border-indigo-400 px-2 py-1 rounded"">JavaScript</span>
+                </div>
+            </article>
+
+            <article class="glass glass-hover p-8 rounded-3xl transition-all duration-300">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="bg-purple-900/40 text-purple-300 px-3 py-1 rounded-full text-xs font-bold border border-purple-500/20">Web Engineering</span>
+                    <span class="text-sm text-slate-500 font-mono">Apr 2024 - Sep 2024</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">E-Channelling for Suwasaviya Hospitals</h3>
+                <div class="mt-4 space-y-4 text-sm text-slate-300 leading-relaxed">
+                        <p>Developed and strategically designed a robust, web-based channelling and patient management system for Suwasaviya Hospitals (Pvt) Ltd, a hypothesis experimental working prototype for BCS. The solution digitised the hospital's manual processes, creating a seamless flow for patients, doctors and administrators.</p>
+                        <p><strong>Architecture:</strong> Utilized Object Oriented Software Engineering (OOSE) to ensure the system is modular, reusable and scalable for future add-ons without breaking program architecture.</p>
+                        <p><strong>Smart Prescription Module:</strong> Engineered a feature allowing doctors to view only their patients' history, strategically limited based on appointment log and prescribe medication with one click, auto-syncing to the patient database.</p>
+                        <p><strong>Database Optimization:</strong> Designed a relational MySQL database primarily in 3rd Normal Form (3NF), while strategically denormalizing the Appointment Table to optimize query speeds and reduce join delays during high traffic usage</p>
+                        <p><strong>Performance:</strong> The solution established a centralised patient database, significantly reducing data retrieval time and operational costs. Implemented AJAX and XML for asynchronous data retrieval, ensuring the app is lightweight and responsive on all devices without page reloads.</p>
+                        <p><strong>Security & Control:</strong> Built a hierarchical Admin dashboard for managing Doctors, manual SLMC verifications and handle patient complaints confidentially. Some modules were combined for easy access while some confidential information were restricted and some sensitive information cant be altered by even Admin, without backend authorization.</p>
+                        <p>In this project, I highly emphasise strategic implementation over advanced technological implementation, a simple technology stack for a low-budget client.</p>
+                </div>
+                <br>
+                
+                <div class="flex flex-wrap gap-2 mt-auto">
+                    <span class="text-xs font-bold text-purple-400 border border-purple-400 px-2 py-1 rounded"">PHP</span>
+                    <span class="text-xs font-bold text-purple-400 border border-purple-400 px-2 py-1 rounded"">MySQL</span>
+                    <span class="text-xs font-bold text-purple-400 border border-purple-400 px-2 py-1 rounded"">AJAX</span>
+                    <span class="text-xs font-bold text-purple-400 border border-purple-400 px-2 py-1 rounded"">JavaScript</span>
+                    <span class="text-xs font-bold text-purple-400 border border-purple-400 px-2 py-1 rounded"">CSS3</span>
+                    <span class="text-xs font-bold text-purple-400 border border-purple-400 px-2 py-1 rounded"">HTML5</span>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<section id="education" class="py-20 bg-slate-950/50 relative">
+    <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+    <div class="mx-auto max-w-7xl px-6 relative">
+        <h2 class="text-3xl md:text-4xl font-black mb-12 flex items-center gap-4">
+            <span class="w-12 h-1 bg-indigo-500 rounded-full"></span>
+            Education
+        </h2>
+
+        <div class="relative">
+            <div class="edu-trunk absolute left-4 top-0 bottom-0 w-px rounded md:left-1/2 md:-translate-x-1/2"></div>
+
+            <div class="flex flex-col gap-8">
+
+                <article class="relative pl-10 md:pl-0 md:grid md:grid-cols-2 md:gap-10">
+                    <span class="edu-node absolute left-[10px] top-8 h-4 w-4 rounded-full bg-indigo-600 md:left-1/2 md:-translate-x-1/2"></span>
+                    <div class="md:col-start-2">
+                        <div class="glass p-7 rounded-2xl border border-slate-800">
+                            <div class="flex flex-wrap items-center justify-between gap-3 mb-2">
+                                <h3 class="text-lg font-bold text-white">London Metropolitan University (UK)</h3>
+                                <span class="text-xs font-mono bg-slate-800 px-2 py-1 rounded text-indigo-300">Feb 2025 - Present</span>
+                            </div>
+                            <p class="text-indigo-400 font-semibold">BSc(Hons) in Data Science</p>
+                            
+                        </div>
+                    </div>
+                    <div class="hidden md:block"></div>
+                </article>
+
+                <article class="relative pl-10 md:pl-0 md:grid md:grid-cols-2 md:gap-10">
+                    <span class="edu-node absolute left-[10px] top-8 h-4 w-4 rounded-full bg-cyan-500 md:left-1/2 md:-translate-x-1/2"></span>
+                    <div class="md:col-start-1 md:text-right">
+                        <div class="glass p-7 rounded-2xl border border-slate-800">
+                            <div class="flex flex-wrap items-center justify-between gap-3 mb-2 md:flex-row-reverse">
+                                <h3 class="text-lg font-bold text-white">BCS, The Chartered Institute for IT UK</h3>
+                                <span class="text-xs font-mono bg-slate-800 px-2 py-1 rounded text-cyan-300">Feb 2023 - Jul 2025</span>
+                            </div>
+                            <p class="text-cyan-400 font-semibold">BCS HEQ - LEVEL 5 , Information Technology</p>
+                            <p class="mt-1 text-xs text-slate-400">Grade: AMBCS</p>
+                            <div class="mt-4 text-sm text-slate-300 leading-relaxed">
+                                <p class="font-semibold text-slate-200 mb-2">Areas covered</p>
+                                <ul class="list-disc list-inside space-y-1 text-slate-300">
+                                    <li>Big Data Management</li>
+                                    <li>Software Development</li>
+                                    <li>Information Systems</li>
+                                    <li>Computer Network Technology</li>
+                                    <li>Internet Technologies (PIT)</li>
+                                    <li>Professional Issues In IS Practice</li>
+                                    <li>Smart Systems</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden md:block"></div>
+                </article>
+
+                <article class="relative pl-10 md:pl-0 md:grid md:grid-cols-2 md:gap-10">
+                    <span class="edu-node absolute left-[10px] top-8 h-4 w-4 rounded-full bg-indigo-500 md:left-1/2 md:-translate-x-1/2"></span>
+                    <div class="md:col-start-2">
+                        <div class="glass p-7 rounded-2xl border border-slate-800">
+                            <div class="flex flex-wrap items-center justify-between gap-3 mb-2">
+                                <h3 class="text-lg font-bold text-white">Wisdom Business Academy</h3>
+                                <span class="text-xs font-mono bg-slate-800 px-2 py-1 rounded text-indigo-300">Aug 2022 - Sep 2023</span>
+                            </div>
+                            <p class="text-indigo-400 font-semibold">ACCA (UK), Knowledge Level</p>
+                            <p class="mt-1 text-xs text-slate-400">ACCA ID : 5694908 (Exams not Attempted)</p>
+                        </div>
+                    </div>
+                    <div class="hidden md:block"></div>
+                </article>
+
+                <article class="relative pl-10 md:pl-0 md:grid md:grid-cols-2 md:gap-10">
+                    <span class="edu-node absolute left-[10px] top-8 h-4 w-4 rounded-full bg-purple-500 md:left-1/2 md:-translate-x-1/2"></span>
+                    <div class="md:col-start-1 md:text-right">
+                        <div class="glass p-7 rounded-2xl border border-slate-800">
+                            <div class="flex flex-wrap items-center justify-between gap-3 mb-2 md:flex-row-reverse">
+                                <h3 class="text-lg font-bold text-white">Bandaranayake College - Gampaha</h3>
+                                <span class="text-xs font-mono bg-slate-800 px-2 py-1 rounded text-purple-300">2013 - 2022</span>
+                            </div>
+                            <p class="text-purple-400 font-semibold">G.C.E. A/L, Mathematics</p>
+                            <p class="mt-4 text-sm text-slate-300 leading-relaxed">Boxing Vice-Captain 2020<br>Photographic Art Society Organizer 20/22 </p>
+                        </div>
+                    </div>
+                    <div class="hidden md:block"></div>
+                </article>
+
+                <article class="relative pl-10 md:pl-0 md:grid md:grid-cols-2 md:gap-10">
+                    <span class="edu-node absolute left-[10px] top-8 h-4 w-4 rounded-full bg-pink-500 md:left-1/2 md:-translate-x-1/2"></span>
+                    <div class="md:col-start-2">
+                        <div class="glass p-7 rounded-2xl border border-slate-800">
+                            <div class="flex flex-wrap items-center justify-between gap-3 mb-2">
+                                <h3 class="text-lg font-bold text-white">DATATECH INSTITUTE OF COMPUTER (ICDT)</h3>
+                                <span class="text-xs font-mono bg-slate-800 px-2 py-1 rounded text-pink-300">Nov 2015 - Jun 2016</span>
+                            </div>
+                            <p class="text-pink-400 font-semibold">Graphic Design course</p>
+                        </div>
+                    </div>
+                    <div class="hidden md:block"></div>
+                </article>
+
+                <article class="relative pl-10 md:pl-0 md:grid md:grid-cols-2 md:gap-10">
+                    <span class="edu-node absolute left-[10px] top-8 h-4 w-4 rounded-full bg-green-500 md:left-1/2 md:-translate-x-1/2"></span>
+                    <div class="md:col-start-1 md:text-right">
+                        <div class="glass p-7 rounded-2xl border border-slate-800">
+                            <div class="flex flex-wrap items-center justify-between gap-3 mb-2 md:flex-row-reverse">
+                                <h3 class="text-lg font-bold text-white">DATATECH INSTITUTE OF COMPUTER (ICDT)</h3>
+                                <span class="text-xs font-mono bg-slate-800 px-2 py-1 rounded text-green-300">Feb 2015 - Aug 2015</span>
+                            </div>
+                            <p class="text-green-400 font-semibold">Computer Hardware Technology course</p>
+                            <p class="mt-1 text-xs text-slate-400">Grade: Badge Top 2015</p>
+                        </div>
+                    </div>
+                    <div class="hidden md:block"></div>
+                </article>
+
+                <article class="relative pl-10 md:pl-0 md:grid md:grid-cols-2 md:gap-10">
+                    <span class="edu-node absolute left-[10px] top-8 h-4 w-4 rounded-full bg-slate-300 md:left-1/2 md:-translate-x-1/2"></span>
+                    <div class="md:col-start-2 md:text-right">
+                        <div class="glass p-7 rounded-2xl border border-slate-800">
+                            <div class="flex flex-wrap items-center justify-between gap-3 mb-2 md:flex-row-reverse">
+                                <h3 class="text-lg font-bold text-white">TEC VISION COMPUTER SCHOOL</h3>
+                                <span class="text-xs font-mono bg-slate-800 px-2 py-1 rounded text-slate-300">Dec 2012 - Jul 2013</span>
+                            </div>
+                            <p class="text-slate-200 font-semibold">Word Processing course</p>
+                        </div>
+                    </div>
+                    <div class="hidden md:block"></div>
+                </article>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="certifications" class="py-20 bg-slate-950">
+    <div class="mx-auto max-w-7xl px-6">
+        <h2 class="text-3xl md:text-4xl font-black mb-12 flex items-center gap-4">
+            <span class="w-12 h-1 bg-cyan-500 rounded-full"></span>
+            Certifications
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="glass p-8 rounded-2xl border border-slate-800" data-animate>
+                <div class="flex items-center justify-between gap-3 mb-4">
+                    <h3 class="text-lg font-bold text-white">In Progress</h3>
+                </div>
+                <ul class="text-sm text-slate-300 space-y-2 list-disc list-inside">
+                    <li><strong>Python Programming</strong> by University of Moratuwa</li> 
+                    <li><strong>Data Science Essentials with Python</strong> by Cisco Networking Academy</li>                
+                </ul>
+            </div>
+
+            <div class="glass p-8 rounded-2xl border border-slate-800" data-animate>
+                <div class="flex items-center justify-between gap-3 mb-4">
+                    <h3 class="text-lg font-bold text-white">Completed</h3>
+                </div>
+                <ul class="text-sm text-slate-300 space-y-3 list-disc list-inside">
+                    <li><strong>Data Analytics Essentials</strong> by Cisco Networking Academy</li>
+                    <li><strong>Advanced SQL</strong> by Kaggle</li>                   
+                    <li><strong>Apply AI: Analyze Customer Reviews</strong> by Cisco Networking Academy</li>
+                    <li><strong>AI/ML Engineer Stage 1</strong> by SLIIT</li>
+                    <li><strong>Python for Beginners</strong> by University of Moratuwa</li>
+                    <li><strong>Intro to SQL</strong> by Kaggle</li>                   
+                    <li><strong>Introduction to Data Science</strong> by Cisco Networking Academy</li>
+                    <li><strong>Web Design for Beginners</strong> by University of Moratuwa</li>
+                    <li><strong>Digital Marketing</strong> by Google</li>
+                    <li><strong>Introduction to Critical Infrastructure Protection</strong> by OPSWAT Academy</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="volunteering" class="py-20 relative bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <div class="absolute inset-0 bg-gradient-to-b from-indigo-900/10 via-cyan-900/5 to-transparent opacity-40"></div>
+    <div class="mx-auto max-w-7xl px-6 relative">
+  
+        <h2 class="mb-12 text-3xl font-extrabold tracking-tight text-white flex items-center">
+            <span class="w-10 h-1 bg-purple-500 inline-block mr-4 rounded"></span> Volunteering
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+            <article class="glass p-6 rounded-2xl lg:col-span-2 border border-slate-800 hover:border-yellow-500/50 transition-all" data-animate>
+                <div class="flex items-start gap-3 mb-4">
+                    <div class="h-10 w-10 flex-shrink-0 rounded-lg bg-yellow-500/20 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-yellow-400 text-sm"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Investment Research Consultant</h3>
+                        <p class="text-xs text-slate-400 mt-1">Investment Research</p>
+                    </div>
+                </div>
+                <p class="text-xs text-slate-500 font-mono mb-3 bg-slate-800/50 px-2 py-1 rounded w-fit">Jan 2018 - Nov 2021 · 3 yrs 11 mos</p>
+                <div class="text-sm text-slate-300 space-y-2">
+                    <p>Took initiative to provide pro bono experimental investment guidance to 14 clients from 2021 August to 2021 November, developing personalized investment strategies that combined money, risk, and emotional management to help them make informed financial decisions. The project was highly successful, all clients able to reach their highest potential.</p>
+                    <p>Designed and delivered educational sessions for 182+ students, equipping them with practical skills to navigate markets, understand trading techniques, and manage investments confidently.</p>
+                    <p>Applied 3 years and 11 months of research experience in blockchain, DeFi, NFTs, trading strategies, and technical/fundamental analysis to guide clients and students with accurate, actionable insights.</p>
+                    <p>Demonstrated strong skills in Emotional Management, Risk Management, Investment Strategy and Market Research, combining analytical thinking with mentorship.</p>
+                </div>
+            </article>
+
+            <article class="glass p-6 rounded-2xl border border-slate-800 hover:border-purple-500/50 transition-all" data-animate>
+                <div class="flex items-start gap-3 mb-4">
+                    <div class="h-10 w-10 flex-shrink-0 rounded-lg bg-purple-500/20 flex items-center justify-center">
+                        <i class="fas fa-users text-purple-400 text-sm"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Organizer</h3>
+                        <p class="text-xs text-slate-400 mt-1">Photographic Art Society</p>
+                    </div>
+                </div>
+                <p class="text-xs text-slate-500 font-mono mb-4 bg-slate-800/50 px-2 py-1 rounded w-fit">Jan 2020 - Mar 2022</p>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                    MEMBER SINCE 2015 SEPTEMBER. I have been a active member of the society for 6 years and 6 months. During my time as the third chair of the Top Board as the Organizer, My responsibility focused on fostering teamwork, discipline and leadership among members, while helping younger students build skills, confidence, and a mindset ready for future challenges. This experience allowed me to grow as a leader and project organizer, while contributing to a vibrant, creative community and leaving a lasting positive impact on the society’s growth and continuity.
+                </p>
+            </article>
+
+            <article class="glass p-6 rounded-2xl border border-slate-800 hover:border-green-500/50 transition-all" data-animate>
+                <div class="flex items-start gap-3 mb-4">
+                    <div class="h-10 w-10 flex-shrink-0 rounded-lg bg-green-500/20 flex items-center justify-center">
+                        <i class="fas fa-microchip text-green-400 text-sm"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Volunteer Hardware Technician</h3>
+                        <p class="text-xs text-slate-400 mt-1">ICDT · Age 12</p>
+                    </div>
+                </div>
+                <p class="text-xs text-slate-500 font-mono mb-3 bg-slate-800/50 px-2 py-1 rounded w-fit">Apr 2015 - Dec 2015</p>
+                <p class="text-sm text-slate-300">
+                    Contributed to the institute by providing hands on guidance in computer hardware troubleshooting and maintenance to fellow students, many of whom were significantly older. Recognized as the top performer & the youngest candidate in the hardware course, I helped peers gain practical experience in diagnosing and repairing hardware issues.
+                </p>
+            </article>
+
+            <article class="glass p-6 rounded-2xl border border-slate-800 hover:border-red-500/50 transition-all lg:col-start-2 lg:row-start-2" data-animate>
+                <div class="flex items-start gap-3 mb-4">
+                    <div class="h-10 w-10 flex-shrink-0 rounded-lg bg-red-500/20 flex items-center justify-center">
+                        <i class="fas fa-video text-red-400 text-sm"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Content Creator</h3>
+                        <p class="text-xs text-slate-400 mt-1">YouTube</p>
+                    </div>
+                </div>
+                <p class="text-xs text-slate-500 font-mono mb-3 bg-slate-800/50 px-2 py-1 rounded w-fit">Jun 2016 - Nov 2021 · 5 yrs 6 mos</p>
+                <p class="text-sm text-slate-300 mb-3">
+                    Created technology focused content on YouTube, educating and engaging viewers, recognized as a youngest tech content creators in Sri Lanka at that time. Developed skills in content writing, video production, public speaking, and community engagement.
+                </p>
+                <p class="text-sm text-slate-400 font-bold"> Participated Events:</p> 
+                <p class="text-sm text-slate-400 mb-3 ">Google I/O Extended 2017/2018/2023, YouTube Open Mic Night 2018 by Google Business Group, YouCon 1.0/2.0 by AIESEC.</p>
+            <br>
+            </article>
+
+             <article class="glass p-6 rounded-2xl border border-slate-800 hover:border-pink-500/50 transition-all" data-animate>
+                <div class="flex items-start gap-3 mb-4">
+                    <div class="h-10 w-10 flex-shrink-0 rounded-lg bg-pink-500/20 flex items-center justify-center">
+                        <i class="fas fa-image text-pink-400 text-sm"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Volunteer Creative Contributor</h3>
+                        <p class="text-xs text-slate-400 mt-1"> Graphic Design & Video Editing</p>
+                    </div>
+                </div>
+                <p class="text-xs text-slate-500 font-mono mb-3 bg-slate-800/50 px-2 py-1 rounded w-fit">Jan 2017 - Aug 2021</p>
+                <p class="text-sm text-slate-300">
+                    Over several years, I applied my skills in graphic design and video editing to support creative projects for student societies, community initiatives, and public content platforms. This included producing YouTube content, editing large photo albums for society events, and designing posters and visuals for community projects.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+
+<section id="skills" class="py-20 border-t border-slate-900 bg-slate-950">
+    <div class="mx-auto max-w-7xl px-6">
+        <p class="text-center text-xs font-bold text-slate-500 mb-6 tracking-widest uppercase">Technical Arsenal - Data Analysis</p>
+        <div class="flex flex-wrap justify-center gap-3 opacity-70 hover:opacity-100 transition-opacity">
+            <span class="px-4 py-2 bg-slate-900 rounded-lg text-slate-300 text-sm border border-slate-800">SQL</span>
+            <span class="px-4 py-2 bg-slate-900 rounded-lg text-slate-300 text-sm border border-slate-800">Python</span>
+            <span class="px-4 py-2 bg-slate-900 rounded-lg text-slate-300 text-sm border border-slate-800">Tableau</span>
+            <span class="px-4 py-2 bg-slate-900 rounded-lg text-slate-300 text-sm border border-slate-800">GitHub</span>
+            <span class="px-4 py-2 bg-slate-900 rounded-lg text-slate-300 text-sm border border-slate-800">Excel</span>
+            <span class="px-4 py-2 bg-slate-900 rounded-lg text-slate-300 text-sm border border-slate-800">Jupyter</span>
+            
+            
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="py-16 bg-slate-950">
+    <div class="mx-auto max-w-7xl px-6">
+        <h2 class="text-3xl md:text-4xl font-black mb-8 flex items-center gap-4">
+            <span class="w-12 h-1 bg-indigo-500 rounded-full"></span>
+            Contact
+        </h2>
+        <div class="glass p-8 rounded-2xl border border-slate-800">
+            <p class="text-slate-300 mb-6">If you'd like to reach out for opportunities, collaborations or projects:</p>
+            <div class="flex flex-wrap gap-3">
+                <a href="https://mail.google.com/mail/?view=cm&to=liyaheam@gmail.com" target="_blank"  class="bg-cyan-600 hover:bg-cyan-500 text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-cyan-500/20">Email Me</a>
+                <a href="#home" class="glass px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-slate-800 transition-colors text-white border border-slate-700">Back to Top</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-10 border-t border-slate-900 bg-slate-950">
+    <div class="mx-auto max-w-7xl px-6">
+        <p class="text-center text-slate-600 text-xs">© 2026. Built with precision from scrach to be Perfect. By Heshan Liyanage. All rights reserved.</p>
+    </div>
+</section>
+
+<script>
+    // Animate on scroll script
+    const observer = new IntersectionObserver((entries)=>{
+      for(const entry of entries){ if(entry.isIntersecting){ entry.target.setAttribute('data-animate',''); } }
+    }, {threshold: 0.1});
+    document.querySelectorAll('[data-animate]').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
